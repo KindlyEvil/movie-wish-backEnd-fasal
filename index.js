@@ -132,7 +132,7 @@ app.get('/watchlist/:email', async function(req, res) {
 	{
 		const decoded = jwt.verify(token, jwtSecretKey);
 		const useremail = decoded.email;
-		if(useremail==email)
+		if(useremail===email)
 		{
 			res.json(user.movies);
 		}
